@@ -1,1 +1,1 @@
-enum Config { local, distrubuted, global }
+enum Config { local, distributed, distributedWithPassiveWidgets, global }
