@@ -15,10 +15,12 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => switch (config) {
-    Config.local => LocalHomepage(),
-    Config.distributed => DistributedHomepage(),
-    Config.distributedWithPassiveWidgets => DistributedPassiveHomepage(),
-    Config.global => GlobalHomepage(),
-  };
+  Widget build(BuildContext context) => MaterialApp(
+    home: switch (config) {
+      Config.local => LocalHomepage(),
+      Config.distributed => DistributedHomepage(),
+      Config.distributedWithPassiveWidgets => DistributedPassiveHomepage(),
+      Config.global => GlobalHomepage(),
+    },
+  );
 }
