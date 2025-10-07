@@ -27,10 +27,29 @@ class _LocalHomepageState extends State<LocalHomepage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter1',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Row(
+              children: [
+                Row(
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Text('-')),
+                    Text(
+                      '$_counter1',
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
+                    ElevatedButton(onPressed: () {}, child: Text('+')),
+                  ],
+                ),
+                Row(
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Text('-')),
+                    Text(
+                      '$_counter1',
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
+                    ElevatedButton(onPressed: () {}, child: Text('+')),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
