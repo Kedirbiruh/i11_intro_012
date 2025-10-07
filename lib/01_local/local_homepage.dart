@@ -8,11 +8,11 @@ class LocalHomepage extends StatefulWidget {
 }
 
 class _LocalHomepageState extends State<LocalHomepage> {
-  int _counter = 0;
+  int _counter1 = 0;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _counter1++;
     });
   }
 
@@ -28,17 +28,13 @@ class _LocalHomepageState extends State<LocalHomepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            Text('$_counter', style: Theme.of(context).textTheme.headlineMedium),
+            Text(
+              '$_counter1',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-
-
-      // formatting nicer for build methods.
     );
   }
 }
