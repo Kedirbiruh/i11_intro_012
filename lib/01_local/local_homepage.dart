@@ -28,61 +28,69 @@ class _LocalHomepageState extends State<LocalHomepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              children: [
-                Expanded(
-                  child: Row(
-                    children: [
-                      ElevatedButton(onPressed: () {}, child: Text('-')),
-                      Text(
-                        '$_counter1',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(onPressed: () {}, child: Text('+')),
-                    ],
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: () {}, child: Text('-')),
+                        Text(
+                          '$_counter1',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        ElevatedButton(onPressed: () {}, child: Text('+')),
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      ElevatedButton(onPressed: () {}, child: Text('-')),
-                      Text(
-                        '$_counter1',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(onPressed: () {}, child: Text('+')),
-                    ],
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: () {}, child: Text('-')),
+                        Text(
+                          '$_counter1',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        ElevatedButton(onPressed: () {}, child: Text('+')),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Row(
-                    children: [
-                      ElevatedButton(onPressed: () {}, child: Text('-')),
-                      Text(
-                        '$_counter1',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(onPressed: () {}, child: Text('+')),
-                    ],
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: () {}, child: Text('-')),
+                        Text(
+                          '$_counter1',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        ElevatedButton(onPressed: () {}, child: Text('+')),
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      ElevatedButton(onPressed: () {}, child: Text('-')),
-                      Text(
-                        '$_counter1',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(onPressed: () {}, child: Text('+')),
-                    ],
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(onPressed: () {}, child: Text('-')),
+                        Text(
+                          '$_counter1',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        ElevatedButton(onPressed: () {}, child: Text('+')),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
