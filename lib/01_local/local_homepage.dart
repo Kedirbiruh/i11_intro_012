@@ -26,52 +26,61 @@ class _LocalHomepageState extends State<LocalHomepage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
               children: [
-                Row(
-                  children: [
-                    ElevatedButton(onPressed: () {}, child: Text('-')),
-                    Text(
-                      '$_counter1',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    ElevatedButton(onPressed: () {}, child: Text('+')),
-                  ],
+                Expanded(
+                  child: Row(
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('-')),
+                      Text(
+                        '$_counter1',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('+')),
+                    ],
+                  ),
                 ),
-                Row(
-                  children: [
-                    ElevatedButton(onPressed: () {}, child: Text('-')),
-                    Text(
-                      '$_counter1',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    ElevatedButton(onPressed: () {}, child: Text('+')),
-                  ],
+                Expanded(
+                  child: Row(
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('-')),
+                      Text(
+                        '$_counter1',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('+')),
+                    ],
+                  ),
                 ),
               ],
             ),
             Row(
               children: [
-                Row(
-                  children: [
-                    ElevatedButton(onPressed: () {}, child: Text('-')),
-                    Text(
-                      '$_counter1',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    ElevatedButton(onPressed: () {}, child: Text('+')),
-                  ],
+                Expanded(
+                  child: Row(
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('-')),
+                      Text(
+                        '$_counter1',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('+')),
+                    ],
+                  ),
                 ),
-                Row(
-                  children: [
-                    ElevatedButton(onPressed: () {}, child: Text('-')),
-                    Text(
-                      '$_counter1',
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-                    ElevatedButton(onPressed: () {}, child: Text('+')),
-                  ],
+                Expanded(
+                  child: Row(
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('-')),
+                      Text(
+                        '$_counter1',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('+')),
+                    ],
+                  ),
                 ),
               ],
             ),
