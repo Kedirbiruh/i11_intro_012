@@ -45,15 +45,6 @@ class _LocalHomepageState extends State<LocalHomepage> {
                                 _counter1--;
                               });
                             },
-
-                            onPressed: () {
-                              setState(() {
-                                _counter1;
-                              });
-                            },
-
-                            child: Text('-'),
-                            
                             child: Text('-'),
                           ),
                           Text(
