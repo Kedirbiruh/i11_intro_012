@@ -9,52 +9,76 @@ class LocalHomepage extends StatefulWidget {
 
 class _LocalHomepageState extends State<LocalHomepage> {
   int _counter1 = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter1++;
-    });
-  }
+  int _counter2 = 0;
+  int _counter3 = 0;
+  int _counter4 = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Titel'),
+        title: Row(
+          children: [
+            Text((_counter1 + _counter2 + _counter3 + _counter4).toString()),
+          ],
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
               child: Row(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(onPressed: () {}, child: Text('-')),
-                        Text(
-                          '$_counter1',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        ElevatedButton(onPressed: () {}, child: Text('+')),
-                      ],
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter1--;
+                              });
+                            },
+
+                            onPressed: () {
+                              setState(() {
+                                _counter1;
+                              });
+                            },
+
+                            child: Text('-'),
+                            
+                            child: Text('-'),
+                          ),
+                          Text(
+                            '$_counter1',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(onPressed: () {}, child: Text('-')),
-                        Text(
-                          '$_counter1',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        ElevatedButton(onPressed: () {}, child: Text('+')),
-                      ],
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          Text(
+                            '$_counter4',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -62,31 +86,39 @@ class _LocalHomepageState extends State<LocalHomepage> {
             ),
             Expanded(
               child: Row(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(onPressed: () {}, child: Text('-')),
-                        Text(
-                          '$_counter1',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        ElevatedButton(onPressed: () {}, child: Text('+')),
-                      ],
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          Text(
+                            '$_counter3',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(onPressed: () {}, child: Text('-')),
-                        Text(
-                          '$_counter1',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        ElevatedButton(onPressed: () {}, child: Text('+')),
-                      ],
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          Text(
+                            '$_counter2',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                        ],
+                      ),
                     ),
                   ),
                 ],

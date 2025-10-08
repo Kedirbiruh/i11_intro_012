@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: switch (config) {
       Config.local => LocalHomepage(),
       Config.distributed => DistributedHomepage(),
