@@ -58,8 +58,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       setState(() {
                         _counter3--;
                       });
-                    },
-                  ),
+                    }              ),
                 ],
               ),
             ),
