@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/01_local/qudrant.dart';
 
-
 class DistributedHomepage extends StatefulWidget {
   const DistributedHomepage({super.key});
-
 
   @override
   State<DistributedHomepage> createState() => _DistributedHomepageState();
 }
-
-
 
 class _DistributedHomepageState extends State<DistributedHomepage> {
   int _counter1 = 0;
@@ -62,7 +58,8 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
                       setState(() {
                         _counter3--;
                       });
-                    }              ),
+                    },
+                  ),
                 ],
               ),
             ),
