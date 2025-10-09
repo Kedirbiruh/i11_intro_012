@@ -42,16 +42,25 @@ class _LocalHomepageState extends State<LocalHomepage> {
                           ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                _counter1--;
+                                _counter4--;
                               });
                             },
                             child: Text('-'),
                           ),
+                          const SizedBox(width: 10),
                           Text(
                             '$_counter1',
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                          const SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter4++;
+                              });
+                            },
+                            child: Text('+'),
+                          ),
                         ],
                       ),
                     ),
@@ -62,12 +71,28 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter3--;
+                              });
+                            },
+                            child: Text('-'),
+                          ),
+                          const SizedBox(width: 10),
                           Text(
-                            '$_counter4',
+                            '$_counter2',
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                          const SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter3++;
+                              });
+                            },
+                            child: Text('+'),
+                          ),
                         ],
                       ),
                     ),
@@ -86,12 +111,28 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter2--;
+                              });
+                            },
+                            child: Text('-'),
+                          ),
+                          const SizedBox(width: 10),
                           Text(
                             '$_counter3',
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                          const SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter2++;
+                              });
+                            },
+                            child: Text('+'),
+                          ),
                         ],
                       ),
                     ),
@@ -102,12 +143,28 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(onPressed: () {}, child: Text('-')),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter1--;
+                              });
+                            },
+                            child: Text('-'),
+                          ),
+                          const SizedBox(width: 10),
                           Text(
-                            '$_counter2',
+                            '$_counter4',
                             style: Theme.of(context).textTheme.headlineMedium,
                           ),
-                          ElevatedButton(onPressed: () {}, child: Text('+')),
+                          const SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                _counter1++;
+                              });
+                            },
+                            child: Text('+'),
+                          ),
                         ],
                       ),
                     ),
