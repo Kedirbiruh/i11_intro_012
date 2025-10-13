@@ -25,6 +25,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
           ],
         ),
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +35,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Qudrant(
+                  Quadrant(
                     value: _counter1,
                     onPlus: () {
                       setState(() {
@@ -47,7 +48,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       });
                     },
                   ),
-                  Qudrant(
+                  Quadrant(
                     value: _counter2,
                     onPlus: () {
                       setState(() {
@@ -58,7 +59,8 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       setState(() {
                         _counter3--;
                       });
-                    }              ),
+                    },
+                  ),
                 ],
               ),
             ),
@@ -67,7 +69,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Qudrant(
+                  Quadrant(
                     value: _counter3,
                     onPlus: () {
                       setState(() {
@@ -80,7 +82,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       });
                     },
                   ),
-                  Qudrant(
+                  Quadrant(
                     value: _counter4,
                     onPlus: () {
                       setState(() {

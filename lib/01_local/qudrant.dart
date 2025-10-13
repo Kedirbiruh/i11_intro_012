@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Qudrant extends StatelessWidget {
-    const Qudrant({
+class Quadrant extends StatelessWidget {
+  const Quadrant({
     super.key,
     required this.value,
     required this.onPlus,
     required this.onMinus,
   });
 
-    final int value;
-    final void Function() onPlus;
-    final void Function() onMinus;
-
+  final int value;
+  final void Function() onPlus;
+  final void Function() onMinus;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +22,7 @@ class Qudrant extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: onMinus, child: const Text('-')),
             const SizedBox(width: 10),
-              Text(
-              '$value',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Text('$value', style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(width: 10),
             ElevatedButton(onPressed: onPlus, child: const Text('+')),
           ],

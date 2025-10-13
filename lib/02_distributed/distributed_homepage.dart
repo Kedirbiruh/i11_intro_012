@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/01_local/qudrant.dart';
+import 'package:flutter_application_2/02_distributed/quadrant_row.dart';
 
 class DistributedHomepage extends StatefulWidget {
   const DistributedHomepage({super.key});
@@ -30,71 +31,55 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Expanded(
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Qudrant(
-                    value: _counter1,
-                    onPlus: () {
-                      setState(() {
-                        _counter4++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter4--;
-                      });
-                    },
-                  ),
-                  Qudrant(
-                    value: _counter2,
-                    onPlus: () {
-                      setState(() {
-                        _counter3++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter3--;
-                      });
-                    },
-                  ),
-                ],
+              child: QuadrantRow(
+                valueLeft: _counter1,
+                onPlusLeft: () {
+                  setState(() {
+                    _counter4++;
+                  });
+                },
+                onMinusLeft: () {
+                  setState(() {
+                    _counter4--;
+                  });
+                },
+                valueRight: _counter2,
+                onPlusRight: () {
+                  setState(() {
+                    _counter3++;
+                  });
+                },
+                onMinusRight: () {
+                  setState(() {
+                    _counter3--;
+                  });
+                },
               ),
             ),
             Expanded(
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Qudrant(
-                    value: _counter3,
-                    onPlus: () {
-                      setState(() {
-                        _counter2++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter2--;
-                      });
-                    },
-                  ),
-                  Qudrant(
-                    value: _counter4,
-                    onPlus: () {
-                      setState(() {
-                        _counter1++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter1--;
-                      });
-                    },
-                  ),
-                ],
+              child: QuadrantRow(
+                valueLeft: _counter3,
+                onPlusLeft: () {
+                  setState(() {
+                    _counter2++;
+                  });
+                },
+                onMinusLeft: () {
+                  setState(() {
+                    _counter2--;
+                  });
+                },
+                valueRight: _counter4,
+                onPlusRight: () {
+                  setState(() {
+                    _counter1++;
+                  });
+                },
+                onMinusRight: () {
+                  setState(() {
+                    _counter1--;
+                  });
+                },
               ),
             ),
           ],

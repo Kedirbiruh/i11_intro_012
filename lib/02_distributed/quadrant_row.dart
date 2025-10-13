@@ -26,12 +26,12 @@ class QuadrantRow extends StatelessWidget {
         Expanded(
           child: Row(
             children: [
-              Qudrant(
+              Quadrant(
                 value: valueLeft,
                 onPlus: onPlusLeft,
                 onMinus: onMinusLeft,
               ),
-              Qudrant(
+              Quadrant(
                 value: valueRight,
                 onPlus: onPlusRight,
                 onMinus: onMinusRight,
