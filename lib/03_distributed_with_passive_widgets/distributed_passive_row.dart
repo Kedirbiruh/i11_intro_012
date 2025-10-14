@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/01_local/qudrant.dart';
+import 'package:flutter_application_2/02_distributed/quadrant.dart';
 
 class QuadrantRow extends StatelessWidget {
   const QuadrantRow({

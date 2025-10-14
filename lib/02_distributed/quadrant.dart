@@ -20,7 +20,7 @@ class Quadrant extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: onMinus, child: const Text('-')),
+            ElevatedButton(onPressed: onMinus, child: const Text('-'),),
             const SizedBox(width: 10),
             Text('$value', style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(width: 10),
