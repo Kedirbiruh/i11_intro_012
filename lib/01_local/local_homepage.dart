@@ -64,7 +64,10 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton(
-                          style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlueAccent, ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.lightBlueAccent,
+                            padding: const EdgeInsets.all(16),
+                          ),
 
                           onPressed: () {
                             setState(() {

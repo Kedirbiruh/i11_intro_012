@@ -28,7 +28,9 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
                 padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
                 child: Text(
                   '${_counter1 + _counter2 + _counter3 + _counter4}',
-                  style: TextStyle(color: Colors.white),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
                 ),
               ),
             ),
@@ -49,7 +51,9 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
                 padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
                 child: Text(
                   '${_counter1 + _counter2 + _counter3 + _counter4}',
-                  style: TextStyle(color: Colors.white),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
                 ),
               ),
             ),
