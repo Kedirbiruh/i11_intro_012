@@ -6,7 +6,7 @@ import 'package:flutter_application_2/03_distributed_with_passive_widgets/distri
 import 'package:flutter_application_2/04_global/global_homepage.dart';
 import 'package:flutter_application_2/02_distributed/quadrant.dart';
 
-const config = Config.distributed;
+const config = Config.local;
 
 void main() {
   runApp(const MyApp());

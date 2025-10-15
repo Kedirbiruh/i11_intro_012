@@ -17,36 +17,52 @@ class _LocalHomepageState extends State<LocalHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: const Color.fromARGB(255, 39, 79, 97),
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 38, 124, 194),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('${_counter1 + _counter2 + _counter3 + _counter4}'),
+                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
+                child: Text(
+                  '${_counter1 + _counter2 + _counter3 + _counter4}',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
+                ),
               ),
             ),
-
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: Text(
-                  'Overengineered Counter',
-                  style: TextStyle(color: Colors.white),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: Text(
+                    'Overengineered Counter',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
             Container(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 38, 124, 194),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('${_counter1 + _counter2 + _counter3 + _counter4}'),
+                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
+                child: Text(
+                  '${_counter1 + _counter2 + _counter3 + _counter4}',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
+                ),
               ),
             ),
           ],
         ),
       ),
+
+
+
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -59,33 +75,71 @@ class _LocalHomepageState extends State<LocalHomepage> {
                   child: Container(
                     decoration: BoxDecoration(border: Border.all()),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.lightBlueAccent,
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              80,
+                              142,
+                              170,
+                            ),
                             padding: const EdgeInsets.all(16),
+                            shape: RoundedRectangleBorder(side: BorderSide()),
                           ),
                           onPressed: () {
                             setState(() {
                               _counter4--;
                             });
                           },
-                          child: Text('-'),
+                          child: Icon(
+                            Icons.arrow_downward,
+                            color: Colors.white,
+                          ),
                         ),
+
+
+
+
                         const SizedBox(width: 10),
-                        Text(
-                          '$_counter1',
-                          style: Theme.of(context).textTheme.headlineMedium,
+
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.green),
+                            child: Text(
+                              '$_counter1',
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                          ),
                         ),
+
                         const SizedBox(width: 10),
+
+
+
+
                         ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              80,
+                              142,
+                              170,
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            shape: RoundedRectangleBorder(side: BorderSide()),
+                          ),
                           onPressed: () {
                             setState(() {
                               _counter4++;
                             });
                           },
-                          child: Text('+'),
+                          child: Icon(
+                            Icons.arrow_downward,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
