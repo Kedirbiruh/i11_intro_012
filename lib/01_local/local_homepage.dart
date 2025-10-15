@@ -60,12 +60,9 @@ class _LocalHomepageState extends State<LocalHomepage> {
         ),
       ),
 
-
-
-
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
+        children: [
           Expanded(
             child: Row(
               mainAxisSize: MainAxisSize.max,
@@ -74,111 +71,163 @@ class _LocalHomepageState extends State<LocalHomepage> {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(border: Border.all()),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(
-                              255,
-                              80,
-                              142,
-                              170,
+                    child: Center(
+                      child: SizedBox(
+                        height: 50,
+                        width: 200,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter4--;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                              ),
                             ),
-                            padding: const EdgeInsets.all(16),
-                            shape: RoundedRectangleBorder(side: BorderSide()),
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              _counter4--;
-                            });
-                          },
-                          child: Icon(
-                            Icons.arrow_downward,
-                            color: Colors.white,
-                          ),
-                        ),
 
-
-
-
-                        const SizedBox(width: 10),
-
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(color: Colors.green),
-                            child: Text(
-                              '$_counter1',
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.titleLarge,
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(color: Colors.green),
+                                child: Center(
+                                  child: Text(
+                                    '$_counter1',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge,
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
 
-                        const SizedBox(width: 10),
-
-
-
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color.fromARGB(
-                              255,
-                              80,
-                              142,
-                              170,
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter4++;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.white,
+                              ),
                             ),
-                            padding: const EdgeInsets.all(16),
-                            shape: RoundedRectangleBorder(side: BorderSide()),
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              _counter4++;
-                            });
-                          },
-                          child: Icon(
-                            Icons.arrow_downward,
-                            color: Colors.white,
-                          ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(border: Border.all()),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter3--;
-                            });
-                          },
-                          child: Text('-'),
+                    child: Center(
+                      child: SizedBox(
+                        height: 50,
+                        width: 200,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter3--;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(color: Colors.green),
+                                child: Center(
+                                  child: Text(
+                                    '$_counter2',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge,
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter3++;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '$_counter2',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        const SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter3++;
-                            });
-                          },
-                          child: Text('+'),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
           ),
+
           Expanded(
             child: Row(
               mainAxisSize: MainAxisSize.max,
@@ -187,64 +236,156 @@ class _LocalHomepageState extends State<LocalHomepage> {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(border: Border.all()),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter2--;
-                            });
-                          },
-                          child: Text('-'),
+                    child: Center(
+                      child: SizedBox(
+                        height: 50,
+                        width: 200,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter2--;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(color: Colors.green),
+                                child: Center(
+                                  child: Text(
+                                    '$_counter3',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge,
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter2++;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '$_counter3',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        const SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter2++;
-                            });
-                          },
-                          child: Text('+'),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(border: Border.all()),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter1--;
-                            });
-                          },
-                          child: Text('-'),
+                    child: Center(
+                      child: SizedBox(
+                        height: 50,
+                        width: 200,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter1--;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_downward,
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(color: Colors.green),
+                                child: Center(
+                                  child: Text(
+                                    '$_counter4',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge,
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                  255,
+                                  80,
+                                  142,
+                                  170,
+                                ),
+                                padding: const EdgeInsets.all(16),
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(),
+                                ),
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _counter1++;
+                                });
+                              },
+                              child: Icon(
+                                Icons.arrow_upward,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '$_counter4',
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        const SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _counter1++;
-                            });
-                          },
-                          child: Text('+'),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
