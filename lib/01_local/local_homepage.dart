@@ -37,7 +37,6 @@ class _LocalHomepageState extends State<LocalHomepage> {
                 ),
               ),
             ),
-
             Container(
               color: Colors.blue,
               child: Padding(
@@ -48,7 +47,6 @@ class _LocalHomepageState extends State<LocalHomepage> {
           ],
         ),
       ),
-
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -68,7 +66,6 @@ class _LocalHomepageState extends State<LocalHomepage> {
                             backgroundColor: Colors.lightBlueAccent,
                             padding: const EdgeInsets.all(16),
                           ),
-
                           onPressed: () {
                             setState(() {
                               _counter4--;
