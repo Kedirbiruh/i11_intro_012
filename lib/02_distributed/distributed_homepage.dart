@@ -18,26 +18,44 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        // title: Text('Hallo'),
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextContainer(
-                containerColor: Colors.amber[100]!,
-                text: (_counter1 + _counter2 + _counter3 + _counter4)
-                    .toString(),
+        backgroundColor: const Color.fromARGB(255, 39, 79, 97),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              color: const Color.fromARGB(255, 38, 124, 194),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
+                child: Text(
+                  '${_counter1 + _counter2 + _counter3 + _counter4}',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-              Text('Mitte'),
-
-              Text('Hallo'),
-            ],
-          ),
+            ),
+            Expanded(
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: Text(
+                    'Overengineered Counter',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              color: const Color.fromARGB(255, 38, 124, 194),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
+                child: Text(
+                  '${_counter1 + _counter2 + _counter3 + _counter4}',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,22 +135,22 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
   }
 }
 
-class TextContainer extends StatelessWidget {
-  const TextContainer({
-    required this.containerColor,
-    required this.text,
-    super.key,
-  });
-  final Color containerColor;
-  final String text;
+// class TextContainer extends StatelessWidget {
+//   const TextContainer({
+//     required this.containerColor,
+//     required this.text,
+//     super.key,
+//   });
+//   final Color containerColor;
+//   final String text;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 60,
-      color: containerColor,
-      child: Center(child: Text(text)),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 60,
+//       height: 60,
+//       color: containerColor,
+//       child: Center(child: Text(text)),
+//     );
+//   }
+// }

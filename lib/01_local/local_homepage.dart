@@ -17,23 +17,24 @@ class _LocalHomepageState extends State<LocalHomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.lightBlue,
         title: Row(
           children: [
             Container(
+              color: Colors.blue,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Overengineered Counter',
-                  style: TextStyle(color: Colors.white),
-                ),
+                child: Text('${_counter1 + _counter2 + _counter3 + _counter4}'),
               ),
             ),
 
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: Text('${_counter1 + _counter2 + _counter3 + _counter4}'),
+                child: Text(
+                  'Overengineered Counter',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
 
@@ -49,7 +50,7 @@ class _LocalHomepageState extends State<LocalHomepage> {
       ),
 
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
             child: Row(
@@ -63,6 +64,8 @@ class _LocalHomepageState extends State<LocalHomepage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton(
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlueAccent, ),
+
                           onPressed: () {
                             setState(() {
                               _counter4--;
