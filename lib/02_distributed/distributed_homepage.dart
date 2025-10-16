@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/02_distributed/quadrant.dart';
+import 'package:flutter_application_2/01_local/local_homepage.dart';
 
 class DistributedHomepage extends StatefulWidget {
   const DistributedHomepage({super.key});
@@ -14,147 +15,106 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
   int _counter3 = 0;
   int _counter4 = 0;
 
+  int _getValue(int quadrant) {
+    switch (quadrant) {
+      case 1:
+        return _counter1;
+      case 2:
+        return _counter2;
+      case 3:
+        return _counter3;
+      case 4:
+        return _counter4;
+      default:
+        return 0;
+    }
+  }
+
+  void _updateCounter(int quadrant, bool increase) {
+    setState(() {
+      switch (quadrant) {
+        case 1:
+          increase ? _counter4++ : _counter4--;
+          break;
+        case 2:
+          increase ? _counter3++ : _counter3--;
+          break;
+        case 3:
+          increase ? _counter2++ : _counter2--;
+          break;
+        case 4:
+          increase ? _counter1++ : _counter1--;
+          break;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final total = _counter1 + _counter2 + _counter3 + _counter4;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 39, 79, 97),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              color: const Color.fromARGB(255, 38, 124, 194),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
-                child: Text(
-                  '${_counter1 + _counter2 + _counter3 + _counter4}',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
-                ),
-              ),
+            _buildCountBox(total),
+            const Text(
+              'Distributed Counter',
+              style: TextStyle(color: Colors.white),
             ),
-            Expanded(
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  child: Text(
-                    'Overengineered Counter',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              color: const Color.fromARGB(255, 38, 124, 194),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
-                child: Text(
-                  '${_counter1 + _counter2 + _counter3 + _counter4}',
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge?.copyWith(color: Colors.white),
-                ),
-              ),
-            ),
+            _buildCountBox(total),
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Quadrant(
-                    value: _counter1,
-                    onPlus: () {
-                      setState(() {
-                        _counter4++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter4--;
-                      });
-                    },
-                  ),
-                  Quadrant(
-                    value: _counter2,
-                    onPlus: () {
-                      setState(() {
-                        _counter3++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter3--;
-                      });
-                    },
-                  ),
-                ],
-              ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Quadrant(
+                  value: _getValue(1),
+                  onPlus: () => _updateCounter(1, true),
+                  onMinus: () => _updateCounter(1, false),
+                ),
+                Quadrant(
+                  value: _getValue(2),
+                  onPlus: () => _updateCounter(2, true),
+                  onMinus: () => _updateCounter(2, false),
+                ),
+              ],
             ),
-            Expanded(
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Quadrant(
-                    value: _counter3,
-                    onPlus: () {
-                      setState(() {
-                        _counter2++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter2--;
-                      });
-                    },
-                  ),
-                  Quadrant(
-                    value: _counter4,
-                    onPlus: () {
-                      setState(() {
-                        _counter1++;
-                      });
-                    },
-                    onMinus: () {
-                      setState(() {
-                        _counter1--;
-                      });
-                    },
-                  ),
-                ],
-              ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Quadrant(
+                  value: _getValue(3),
+                  onPlus: () => _updateCounter(3, true),
+                  onMinus: () => _updateCounter(3, false),
+                ),
+                Quadrant(
+                  value: _getValue(4),
+                  onPlus: () => _updateCounter(4, true),
+                  onMinus: () => _updateCounter(4, false),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildCountBox(int total) {
+    return Container(
+      color: const Color.fromARGB(255, 38, 124, 194),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      child: Text(
+        '$total',
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
     );
   }
 }
-
-// class TextContainer extends StatelessWidget {
-//   const TextContainer({
-//     required this.containerColor,
-//     required this.text,
-//     super.key,
-//   });
-//   final Color containerColor;
-//   final String text;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: 60,
-//       height: 60,
-//       color: containerColor,
-//       child: Center(child: Text(text)),
-//     );
-//   }
-// }
