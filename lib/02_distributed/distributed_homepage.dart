@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/02_distributed/quadrant.dart';
+import 'package:flutter_application_2/02_distributed/distributed_quadrant.dart';
 import 'package:flutter_application_2/01_local/local_homepage.dart';
 
 class DistributedHomepage extends StatefulWidget {

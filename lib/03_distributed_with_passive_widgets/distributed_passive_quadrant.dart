@@ -14,17 +14,25 @@ class DistributedQuadrant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(border: Border.all()),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(onPressed: onMinus, child: Text('-')),
-          const SizedBox(width: 10),
-          Text('$value', style: Theme.of(context).textTheme.headlineMedium),
-          const SizedBox(width: 10),
-          ElevatedButton(onPressed: onPlus, child: Text('+')),
-        ],
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black),
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.green[200],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: onMinus, child: const Icon(Icons.remove)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: Text('$value', style: Theme.of(context).textTheme.headlineMedium),
+            ),
+            ElevatedButton(onPressed: onPlus, child: const Icon(Icons.add)),
+          ],
+        ),
       ),
     );
   }
