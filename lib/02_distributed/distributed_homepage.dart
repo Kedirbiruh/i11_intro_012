@@ -61,7 +61,7 @@ class _DistributedHomepageState extends State<DistributedHomepage> {
           children: [
             _buildCountBox(total),
             const Text(
-              'Distributed Counter',
+              'DistributedHomepage',
               style: TextStyle(color: Colors.white),
             ),
             _buildCountBox(total),
