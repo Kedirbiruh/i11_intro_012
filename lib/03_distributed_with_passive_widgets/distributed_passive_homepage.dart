@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'distributed_passive_row.dart';
+import 'package:flutter_application_2/03_distributed_with_passive_widgets/distributed_passive_row.dart';
 
 class DistributedPassiveHomepage extends StatefulWidget {
   const DistributedPassiveHomepage({super.key});
