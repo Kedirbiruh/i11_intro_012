@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DistributedPassiveQuadrant extends StatelessWidget {
-  const DistributedPassiveQuadrant({
+class DistributedQuadrant extends StatelessWidget {
+  const DistributedQuadrant({
     super.key,
     required this.value,
     required this.onPlus,

@@ -28,7 +28,7 @@ class _DistributedPassiveHomepageState
       body: Column(
         children: [
           Expanded(
-            child: QuadrantRow(
+            child: DistributedPassiveRow(
               valueLeft: _counter1,
               onPlusLeft: () => setState(() => _counter4++),
               onMinusLeft: () => setState(() => _counter4--),
@@ -38,7 +38,7 @@ class _DistributedPassiveHomepageState
             ),
           ),
           Expanded(
-            child: QuadrantRow(
+            child: DistributedPassiveRow(
               valueLeft: _counter3,
               onPlusLeft: () => setState(() => _counter2++),
               onMinusLeft: () => setState(() => _counter2--),

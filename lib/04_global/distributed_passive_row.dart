@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/03_distributed_with_passive_widgets/distributed_passive_quadrant.dart';
 
-class DistributedPassiveRow extends StatelessWidget {
-  const DistributedPassiveRow({
+class GlobalPassiveRow extends StatelessWidget {
+  const GlobalPassiveRow({
     super.key,
     required this.valueLeft,
     required this.onPlusLeft,
@@ -37,3 +37,5 @@ class DistributedPassiveRow extends StatelessWidget {
     );
   }
 }
+
+
